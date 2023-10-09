@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jthor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 12:41:35 AM"/>
+        <attribute name="created" value="anRob3I7Sk9ITlQ7MjAyMy0xMC0wNDsxMjozMTo1OSBBTTsyMjAw"/>
+        <attribute name="edited" value="anRob3I7Sk9ITlQ7MjAyMy0xMC0wNDsxMjo0MTozNSBBTTsxOzIzMDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="books" type="Real" array="False" size=""/>
+            <declare name="unitPrice" type="Real" array="False" size=""/>
+            <declare name="shipping" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;How many books?&quot;" newline="True"/>
+            <input variable="books"/>
+            <output expression="&quot;What's the price of the books?&quot;" newline="True"/>
+            <input variable="unitPrice"/>
+            <assign variable="total" expression="books*unitPrice"/>
+            <if expression="total&gt;50">
+                <then>
+                    <assign variable="shipping" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="shipping" expression="25"/>
+                </else>
+            </if>
+            <output expression="&quot;Order Total: &quot; &amp;total &amp;&#13;&#10;&quot; Shipping Cost: &quot; &amp;shipping" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
